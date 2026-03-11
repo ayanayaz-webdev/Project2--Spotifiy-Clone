@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="close">
+          <img class="invert" src="img/close.svg" alt="">
+        </div>
+        <div class="home bg-grey rounded m-1 p-1">
+          <div class="logo">
+            <img class="invert" src="img/logo.svg" alt="" />
+          </div>
+          <ul>
+            <li><img class="invert" src="img/home.svg" alt="home" />Home</li>
+            <li><img class="invert" src="img/search.svg" alt="search" />Search</li>
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m-1 p-1">
+          <div class="heading">
+            <img class="invert" src="img/library.svg" alt="library" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="songlist">
+            <ul></ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/privacy/"
+                ><span>Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/accessibility/"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right bg-grey rounded">
+        <div class="header">
+          <div class="nav">
+            <div class="hamburgercontainer">
+              <img width="35" height="35" class="invert hamburger" src="img/hamburger.svg" alt="hamburger">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="currentColor"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M17 4L8.66943 10.0405C6.44352 11.6545 6.44353 12.3455 8.66943 13.9595L17 20"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#141B34"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M7 4L15.3306 10.0405C17.5565 11.6545 17.5565 12.3455 15.3306 13.9595L7 20"
+              />
+            </svg>
+          </div>
+          </div>
+          <div class="buttons">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log in</button>
+          </div>
+        </div>
+        <div class="spotifyplaylist">
+          <h1>Spotify Playlist</h1>
+          <div class="cardContainer">
+            <!-- <div data-folder="cs" class="card">
+              <div class="play">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="e-91000-icon e-91000-baseline"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                  ></path>
+                </svg>
+              </div>
+              <img src="img-vids/card-1.jpg" alt="" />
+
+              <h2>No Skips</h2>
+              <p>Hard beats and real bars to lift your mood. Feel energy!</p>
+            </div> -->
+
+
+
+            <!-- <div data-folder="ncs" class="card">
+              <div class="play">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="e-91000-icon e-91000-baseline"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                  ></path>
+                </svg>
+              </div>
+              <img src="img-vids/card-3.jpg" alt="" />
+
+              <h2>Now-A-Days</h2>
+              <p>Just me, and thoughts I can’t explain...</p>
+            </div> -->
+
+
+
+
+            <!-- <div class="card">
+              <div class="play">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="e-91000-icon e-91000-baseline"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                  ></path>
+                </svg>
+              </div>
+              <img src="img-vids/card-2.jpg" alt="" />
+
+              <h2>Soft-Core</h2>
+              <p>Soft beats and calm vibes to ease your mind...</p>
+            </div> -->
+
+
+
+          </div>
+
+          <div class="playbar">
+            <div class="songtime">
+              <div class="songtimeleft"></div>
+              <div class="seekbar">
+                <div class="circle"></div>
+              </div>
+              <div class="songtimeright"></div>
+            </div>
+            <div class="abovebar">
+              <div class="songinfo"></div>
+              <div class="songsbuttons">
+                <img class="hov shuffel" src="img/shuffel.svg" alt="" />
+                <img width="35" id="previous" src="img/prevsong.svg" alt="" />
+                <img width="35" id="play" src="img/play.svg" alt="" />
+                <img width="35" id="next" src="img/nextsong.svg" alt="" />
+                <img width="35" class="hov" src="img/repaet.svg" alt="">
+              </div>
+              <div class="sidebuttons">
+                <img class="hov" src="img/mic.svg" alt="" />
+                <img class="hov" src="img/queue.svg" alt="" />
+                <img class="hov" src="img/connect.svg" alt="" />
+                <div class="vol">
+                <div class="volume">
+                <img class="hov" src="img/volume.svg" alt="">
+                <div class="range">
+                  <input type="range" class="volume-bar" name="volume" id="">
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

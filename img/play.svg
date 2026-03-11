@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <!-- White circle -->
+    <circle cx="16" cy="16" r="16" fill="#ffffff"/>
+
+    <!-- Smooth balanced play icon -->
+    <path 
+        d="M12.5 9.5
+           Q12.5 9, 13.2 9.3
+           L21 14.7
+           Q22 15.4, 22 16
+           Q22 16.6, 21 17.3
+           L13.2 22.7
+           Q12.5 23, 12.5 22.5
+           Z"
+        fill="#000000"/>
+</svg>
