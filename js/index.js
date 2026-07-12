@@ -18,18 +18,8 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`${folder}/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`/${folder}/`)[1]);
-    }
-  }
+let response = await fetch(`/${folder}/songs.json`);
+songs = await response.json();
 
 
 
@@ -77,50 +67,51 @@ const playMusic = (track) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:5500/Songs/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
- 
-  let anchors = div.getElementsByTagName("a");
- 
+  let folders = [
+  "ncs",
+  "old",
+  "rl",
+  "rlp",
+  "Ka",
+  "kap",
+  "cs",
+  "Sb",
+  "Sf",
+  "Sw",
+  "cs"
+];
 
-  let cardConatiner = document.querySelector(".cardContainer");
+let cardConatiner = document.querySelector(".cardContainer");
 
-  let array = Array.from(anchors);
-  for (let index = 0; index < array.length; index++) {
-    const e = array[index];
+for (const folder of folders) {
+  let a = await fetch(`/Songs/${folder}/info.json`);
+  let response = await a.json();
 
-    if (e.href.includes("/Songs/")) {
-      let folder = e.href.split("/").slice(-2)[1];
-      // Get the metadata of the folder
-      let a = await fetch(`http://127.0.0.1:5500/Songs/${folder}/info.json`);
-      let response = await a.json();
-      cardConatiner.innerHTML =
-        cardConatiner.innerHTML +
-        `<div data-folder="${folder}" class="card">
-              <div class="play">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  class="e-91000-icon e-91000-baseline"
-                  viewBox="0 0 24 24"
-                  height="24px"
-                  width="24px"
-                >
-                  <path
-                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
-                  ></path>
-                </svg>
-              </div>
-              <img src="/Songs/${folder}/cover.jpg" alt="" />
+  cardConatiner.innerHTML += `
+    <div data-folder="${folder}" class="card">
+      <div class="play">
+        <svg
+          data-encore-id="icon"
+          role="img"
+          aria-hidden="true"
+          class="e-91000-icon e-91000-baseline"
+          viewBox="0 0 24 24"
+          height="24px"
+          width="24px"
+        >
+          <path
+            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+          ></path>
+        </svg>
+      </div>
 
-              <h2>${response.title}</h2>
-              <p>${response.description}</p>
-            </div>`;
-    }
-  }
+      <img src="/Songs/${folder}/cover.jpg" alt="" />
+
+      <h2>${response.title}</h2>
+      <p>${response.description}</p>
+    </div>`;
+}
+  
 
   //  Load the playlist whenerever card is loaded
   Array.from(document.getElementsByClassName("card")).forEach((e) => {

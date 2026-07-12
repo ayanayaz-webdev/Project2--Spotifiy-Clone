@@ -365,6 +365,23 @@ filter: invert(1);
 .volume-bar:hover::-moz-range-progress {
   background: #1db954;
 }
+.prembtn{
+  border-radius: 20px;
+  background-color: #ffff;
+  color: black;
+  
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 8px;
+}
+.prembtn:hover{
+font-weight: bold;
+transition: all 0.2s;
+  transform: scale(1);
+}
+
 
 @media (max-width:1200px ) {
   .left{
