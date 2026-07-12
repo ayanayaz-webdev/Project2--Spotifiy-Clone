@@ -77,8 +77,7 @@ async function displayAlbums() {
   "cs",
   "Sb",
   "Sf",
-  "Sw",
-  "cs"
+  "Sw"
 ];
 
 let cardConatiner = document.querySelector(".cardContainer");
